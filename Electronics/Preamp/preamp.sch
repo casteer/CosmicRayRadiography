@@ -1,0 +1,384 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:preamp-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L OPA333DBV U1
+U 1 1 59204494
+P 5000 5300
+F 0 "U1" H 5341 5346 50  0000 L CNN
+F 1 "OPA659" H 5341 5255 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 5000 5150 50  0001 L CNN
+F 3 "" H 5150 5450 50  0001 C CNN
+F 4 "SOT23-5" H 5000 5300 60  0001 C CNN "Package"
+	1    5000 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 59204A12
+P 5650 6300
+F 0 "C2" V 5398 6300 50  0000 C CNN
+F 1 "0.5pF" V 5489 6300 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" H 5688 6150 50  0001 C CNN
+F 3 "" H 5650 6300 50  0001 C CNN
+F 4 "0603" V 5650 6300 60  0001 C CNN "Package"
+	1    5650 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 59204BB7
+P 6100 5300
+F 0 "R4" V 5893 5300 50  0000 C CNN
+F 1 "50" V 5984 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6030 5300 50  0001 C CNN
+F 3 "" H 6100 5300 50  0001 C CNN
+F 4 "0603" V 6100 5300 60  0001 C CNN "Package"
+F 5 "1%" V 6100 5300 60  0001 C CNN "Tolerance"
+	1    6100 5300
+	0    1    1    0   
+$EndComp
+Text Notes 1750 4700 0    60   ~ 0
+Voltage inputs around 10mV to 500mV, \nso need gains of the order of 1 upwards \nto 100. Let's assume 1 to 1000 for good \nmeasure. \n\nT-network gain  = POT_TRIM * ( 1 + R3/R2)
+$Comp
+L R R1
+U 1 1 59204EBC
+P 3150 5800
+F 0 "R1" H 3080 5754 50  0000 R CNN
+F 1 "50" H 3080 5845 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603" V 3080 5800 50  0001 C CNN
+F 3 "" H 3150 5800 50  0001 C CNN
+F 4 "0603" H 3150 5800 60  0001 C CNN "Package"
+F 5 "1%" H 3150 5800 60  0001 C CNN "Tolerance"
+	1    3150 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDREF #PWR1
+U 1 1 59204F47
+P 3150 6150
+F 0 "#PWR1" H 3150 5900 50  0001 C CNN
+F 1 "GNDREF" H 3155 5977 50  0000 C CNN
+F 2 "" H 3150 6150 50  0001 C CNN
+F 3 "" H 3150 6150 50  0001 C CNN
+	1    3150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 592054E9
+P 3850 7050
+F 0 "C3" H 3735 7004 50  0000 R CNN
+F 1 "0.1uF" H 3735 7095 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Hand" H 3888 6900 50  0001 C CNN
+F 3 "" H 3850 7050 50  0001 C CNN
+F 4 "EIA 3216-18" H 3850 7050 60  0001 C CNN "Package"
+	1    3850 7050
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDREF #PWR2
+U 1 1 59205552
+P 3650 7250
+F 0 "#PWR2" H 3650 7000 50  0001 C CNN
+F 1 "GNDREF" H 3655 7077 50  0000 C CNN
+F 2 "" H 3650 7250 50  0001 C CNN
+F 3 "" H 3650 7250 50  0001 C CNN
+	1    3650 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 59205700
+P 5650 5950
+F 0 "R3" V 5443 5950 50  0000 C CNN
+F 1 "50" V 5534 5950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5580 5950 50  0001 C CNN
+F 3 "" H 5650 5950 50  0001 C CNN
+F 4 "0603" V 5650 5950 60  0001 C CNN "Package"
+F 5 "1%" V 5650 5950 60  0001 C CNN "Tolerance"
+	1    5650 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 59205872
+P 5200 6300
+F 0 "R2" V 4993 6300 50  0000 C CNN
+F 1 "50" V 5084 6300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5130 6300 50  0001 C CNN
+F 3 "" H 5200 6300 50  0001 C CNN
+F 4 "0603" V 5200 6300 60  0001 C CNN "Package"
+F 5 "1%" V 5200 6300 60  0001 C CNN "Tolerance"
+	1    5200 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDREF #PWR4
+U 1 1 592058D8
+P 5000 6500
+F 0 "#PWR4" H 5000 6250 50  0001 C CNN
+F 1 "GNDREF" H 5005 6327 50  0000 C CNN
+F 2 "" H 5000 6500 50  0001 C CNN
+F 3 "" H 5000 6500 50  0001 C CNN
+	1    5000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT_TRIM RV1
+U 1 1 59205A34
+P 4600 5950
+F 0 "RV1" H 4530 5996 50  0000 R CNN
+F 1 "500 Ohm POT_TRIM" V 4530 5905 50  0000 L BNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Bourns_3296W" H 4600 5950 50  0001 C CNN
+F 3 "" H 4600 5950 50  0001 C CNN
+F 4 "Bourns 3296W" H 4600 5950 60  0001 C CNN "Package"
+	1    4600 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR3
+U 1 1 59205CB4
+P 4400 5200
+F 0 "#PWR3" H 4400 4950 50  0001 C CNN
+F 1 "GNDREF" V 4405 5072 50  0000 R CNN
+F 2 "" H 4400 5200 50  0001 C CNN
+F 3 "" H 4400 5200 50  0001 C CNN
+	1    4400 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X01 OUT1
+U 1 1 59206D53
+P 6950 5300
+F 0 "OUT1" H 7028 5341 50  0000 L CNN
+F 1 "OUT" H 7028 5250 50  0000 L CNN
+F 2 "Connectors:1pin" H 6950 5300 50  0001 C CNN
+F 3 "" H 6950 5300 50  0001 C CNN
+	1    6950 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 IN1
+U 1 1 59206F2F
+P 2350 5400
+F 0 "IN1" H 2269 5175 50  0000 C CNN
+F 1 "IN" H 2269 5266 50  0000 C CNN
+F 2 "Connectors:1pin" H 2350 5400 50  0001 C CNN
+F 3 "" H 2350 5400 50  0001 C CNN
+	1    2350 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 +V1
+U 1 1 59207B9A
+P 3700 3950
+F 0 "+V1" H 3778 3991 50  0000 L CNN
+F 1 "+V" H 3778 3900 50  0000 L CNN
+F 2 "Connectors:1pin" H 3700 3950 50  0001 C CNN
+F 3 "" H 3700 3950 50  0001 C CNN
+	1    3700 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 -V1
+U 1 1 5920858D
+P 2700 6550
+F 0 "-V1" H 2778 6591 50  0000 L CNN
+F 1 "-V" H 2778 6500 50  0000 L CNN
+F 2 "Connectors:1pin" H 2700 6550 50  0001 C CNN
+F 3 "" H 2700 6550 50  0001 C CNN
+	1    2700 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 4100 4900 5000
+Wire Wire Line
+	4900 6550 4900 5600
+Connection ~ 4900 4100
+Wire Wire Line
+	5300 5300 5950 5300
+Wire Wire Line
+	5850 5300 5850 6300
+Wire Wire Line
+	4200 5400 4200 5950
+Connection ~ 4200 5400
+Connection ~ 5850 5300
+Wire Wire Line
+	6250 5300 6750 5300
+Wire Wire Line
+	3150 5650 3150 5400
+Connection ~ 3150 5400
+Wire Wire Line
+	3150 6150 3150 5950
+Wire Wire Line
+	2550 5400 4700 5400
+Wire Wire Line
+	3450 7200 3450 7250
+Wire Wire Line
+	3450 7250 3850 7250
+Wire Wire Line
+	3850 7250 3850 7200
+Connection ~ 3650 7250
+Wire Wire Line
+	5850 5950 5800 5950
+Wire Wire Line
+	5850 6300 5800 6300
+Connection ~ 5850 5950
+Wire Wire Line
+	4750 5950 5500 5950
+Wire Wire Line
+	5350 6300 5500 6300
+Wire Wire Line
+	5400 6300 5400 5950
+Connection ~ 5400 5950
+Connection ~ 5400 6300
+Wire Wire Line
+	5050 6300 5000 6300
+Wire Wire Line
+	5000 6300 5000 6500
+Wire Wire Line
+	4400 5200 4700 5200
+Connection ~ 3850 7250
+Wire Wire Line
+	3900 3950 4000 3950
+Wire Wire Line
+	4000 3950 4000 4100
+Connection ~ 4000 4100
+Wire Wire Line
+	4000 4100 5750 4100
+Wire Wire Line
+	2900 6550 4900 6550
+Wire Wire Line
+	4200 5950 4450 5950
+Wire Wire Line
+	5000 5950 5000 5700
+Wire Wire Line
+	5000 5700 4600 5700
+Wire Wire Line
+	4600 5700 4600 5800
+Connection ~ 5000 5950
+$Comp
+L C C1
+U 1 1 5922BBB7
+P 3300 7050
+F 0 "C1" H 3185 7004 50  0000 R CNN
+F 1 "10uF" H 3185 7095 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Hand" H 3338 6900 50  0001 C CNN
+F 3 "" H 3300 7050 50  0001 C CNN
+F 4 "EIA 3216-18" H 3300 7050 60  0001 C CNN "Package"
+	1    3300 7050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 7200 3300 7200
+Wire Wire Line
+	3850 6900 3850 6550
+Connection ~ 3850 6550
+Wire Wire Line
+	3300 6900 3300 6550
+Connection ~ 3300 6550
+$Comp
+L C C5
+U 1 1 5924A2F6
+P 5750 4650
+F 0 "C5" H 5635 4604 50  0000 R CNN
+F 1 "0.1uF" H 5635 4695 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Hand" H 5788 4500 50  0001 C CNN
+F 3 "" H 5750 4650 50  0001 C CNN
+F 4 "EIA 3216-18" H 5750 4650 60  0001 C CNN "Package"
+	1    5750 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDREF #PWR5
+U 1 1 5924A2FC
+P 5550 4850
+F 0 "#PWR5" H 5550 4600 50  0001 C CNN
+F 1 "GNDREF" H 5555 4677 50  0000 C CNN
+F 2 "" H 5550 4850 50  0001 C CNN
+F 3 "" H 5550 4850 50  0001 C CNN
+	1    5550 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4800 5350 4850
+Wire Wire Line
+	5350 4850 5900 4850
+Wire Wire Line
+	5750 4850 5750 4800
+Connection ~ 5550 4850
+Connection ~ 5750 4850
+$Comp
+L C C4
+U 1 1 5924A308
+P 5200 4650
+F 0 "C4" H 5085 4604 50  0000 R CNN
+F 1 "10uF" H 5085 4695 50  0000 R CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Hand" H 5238 4500 50  0001 C CNN
+F 3 "" H 5200 4650 50  0001 C CNN
+F 4 "EIA 3216-18" H 5200 4650 60  0001 C CNN "Package"
+	1    5200 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5350 4800 5200 4800
+Wire Wire Line
+	5750 4100 5750 4500
+Wire Wire Line
+	5200 4100 5200 4500
+Connection ~ 5200 4100
+$Comp
+L CONN_01X01 GND1
+U 1 1 5925A892
+P 6100 4850
+F 0 "GND1" H 6178 4891 50  0000 L CNN
+F 1 "GND" H 6178 4800 50  0000 L CNN
+F 2 "Connectors:1pin" H 6100 4850 50  0001 C CNN
+F 3 "" H 6100 4850 50  0001 C CNN
+	1    6100 4850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
