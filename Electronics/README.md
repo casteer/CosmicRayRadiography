@@ -24,3 +24,6 @@ The design must have or do...
 * Minimize the number of cables to the system
 * Setup must be robust over 6 to 12 months
 * Enable an understanding (and mitigation) of the environmental dependence of its performance
+
+For the intended detectors, the electronics must provide up to 1kV over the 12 channels. 
+
